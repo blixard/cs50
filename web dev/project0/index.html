@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Project 0</title>
+</head>
+<body>
+    <form name="index_form" class="btn-group btn-group-toggle container-fluid"  >
+        <input type="submit" class="sss btn btn-secondary" value="Goole search" onclick="return search();">
+        <input type="submit" class="sss btn btn btn-secondary" value="another button" onclick="return another();">
+        <input type="submit" class="sss btn btn btn-secondary" value="and another" onclick="return another();">
+    </form>
+
+    <script>
+        function search(){
+            document.index_form.action ="file:///E:/vs%20workspace%201/cs50/project0/search.html";
+            return true;
+        }
+    
+        function other(){
+            document.index_form.action ="file:///E:/vs%20workspace%201/cs50/project0/other.html";
+            return true;
+        }
+        function another(){
+            document.index_form.action ="file:///E:/vs%20workspace%201/cs50/project0/another.html";
+            return true;
+        }
+    </script>
+</body>
+</html>

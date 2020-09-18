@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Project 0</title>
+</head>
+<body>
+    <form name="index_form" class="form" >
+        <div class="row">
+            <input type="text" class="text container col"  name="q"> 
+        </div>
+        <div class="row" > 
+            <input type="submit" class="sss btn btn btn-secondary text container col" value="Google search" onclick="return search();">
+            <input type="submit" class="sss btn btn btn-secondary text container col" value="I am feeling lucky" onclick="return lucky();">
+        </div>
+        
+        
+    </form>
+
+    <script>
+        function search(){
+            document.index_form.action ="http:/google.com/search";
+            return true;
+        }
+        function lucky(){
+            if(document.forms['index_form'].elements['q'].value==""){
+                document.index_form.action ="http:/google.com/doodles";
+                return true;
+            }
+            else{
+                var name = document.forms['index_form'].elements['q'].value;
+                document.forms['index_form'].elements['q'].value ="";
+                document.index_form.action="https://en.wikipedia.org/wiki/"+name;
+                return true;
+            }
+            
+            return false;
+        }
+    </script>
+</body>
+</html>

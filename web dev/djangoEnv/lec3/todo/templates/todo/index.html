@@ -1,0 +1,20 @@
+{% extends "todo/format.html" %}
+{% block body %}
+<div class="row">
+    <h1 class="col">Tasks</h1>
+    <h1 class="col">Importance</h1>
+</div>
+<div class="row alert alert-danger ">
+<ul class="task col  list-group list-group-flush ">
+    {% for task in tasks %}
+        <li class="list-group-item list-group-item-action list-group-item-dark">{{task}}</li>
+    {% endfor %}
+</ul>
+<ul class="imp col  list-group list-group-flush" >
+    {% for i in imp %}
+        <li class="list-group-item list-group-item-action list-group-item-warning">{{i}}</li>
+    {% endfor %}
+</ul>
+</div>
+<a href="{% url 'todo:add' %}">Add tasks</a>
+{% endblock %}

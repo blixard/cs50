@@ -1,0 +1,18 @@
+{% extends "todo/format.html" %}
+
+{% block body %}
+    <form action="{% url 'todo:add' %}" method="post" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="formControlRange">add a task</label>
+            <input type="range" class="form-control-range" id="formControlRange">
+       </div>
+        {{form}}
+        <div class="form-group">
+            <label for="formControlRange">here is a motivational quote</label>
+            <input type="range" class="form-control-range" id="formControlRange">
+       </div>
+        <input type="submit" class="btn btn-success">
+    </form>
+<a href="{% url 'todo:index' %}">View Tasks</a>
+{% endblock %}

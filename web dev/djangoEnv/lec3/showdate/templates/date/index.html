@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="{% static 'date/style.css' %} ">
+    <title>now</title>
+</head>
+<body>
+<h1> {{day}} / {{month}} / {{year}} </h1>
+<br>
+<h1> {{hour}} . {{minute}} . {{sec}} </h1>
+</body>
+</html>
